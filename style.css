@@ -1,6 +1,5 @@
 * {
     margin: 0;
-
 }
 
 header {
@@ -22,7 +21,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .container {
@@ -38,6 +36,7 @@ main {
 }
 
 .card {
+    position: relative;
     display: flex;
     height: 45%;
     flex-basis: calc(75% / 3);
@@ -46,8 +45,6 @@ main {
     align-items: center;
     justify-content: center;
     background-color: #FFFFFF;
-    /* column-gap: 2%; */
-    /* row-gap: 2%; */
 }
 
 .image{
@@ -64,9 +61,6 @@ main {
     display: flex;
     align-items: center;
     justify-content: left;
-
-
-
 }
 
 .date{
@@ -77,6 +71,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: left;
+}
 
-
+.svg{
+    position: absolute;
+    top: -10px;
 }
