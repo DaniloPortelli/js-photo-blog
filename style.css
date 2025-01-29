@@ -13,7 +13,7 @@ header {
 
 header h1 {
     font-family: 'Edu TAS Beginner', sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 main {
@@ -26,7 +26,7 @@ main {
 }
 
 .container {
-    border: solid blue 2px;
+    /* border: solid blue 2px; */
     height: 100%;
     width: 55%;
     display: flex;
@@ -41,27 +41,42 @@ main {
     display: flex;
     height: 45%;
     flex-basis: calc(75% / 3);
-    border: solid red 2px;
+    /* border: solid red 2px; */
     flex-direction: column;
     align-items: center;
-    /* column-gap: 2%;
-    row-gap: 2%; */
+    justify-content: center;
+    background-color: #FFFFFF;
+    /* column-gap: 2%; */
+    /* row-gap: 2%; */
 }
 
 .image{
-    border: solid green 2px;
+    /* border: solid green 2px; */
     height: 65%;
     width: 90%;
 }
 
 .title{
-    border: solid black 3px;
+    /* border: solid black 3px; */
     height: 15%;
     width: 90%;
+    font-family: 'Edu TAS Beginner', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
+
 }
 
 .date{
-    border: solid white 3px;
+    /* border: solid white 3px; */
     height: 10%;
     width: 90%;
+    font-family: 'Sometype Mono', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+
 }

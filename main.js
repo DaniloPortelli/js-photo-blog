@@ -28,3 +28,31 @@
 // rendi la pagina responsive, in modo che su mobile e tablet le foto 
 // si dispongano man mano una sotto l’altra ed il titolo abbia una 
 // dimensione adeguata
+
+// const container = document.getElementById("container")
+
+
+// for (let i = 0; i < 6; i++) {
+
+//     fetch('https://lanciweb.github.io/demo/api/pictures/')
+//         .then(response => response.json())
+//         .then(data => {
+
+//             let element = data[i]
+
+//             container.innerHTML +=
+//                 `<div class="card">
+//                 <figure class="image">
+//                   <img width="100%" height="100%" src="${element.url}"alt="">
+//                 </figure>
+//                 <div class="title">
+//                   <h3>${element.title}</h3>
+//                 </div>
+//                 <div class="date">
+//                   <h4>${element.date}</h4>
+//                 </div>
+//              </div>`
+
+//         });
+
+// }
