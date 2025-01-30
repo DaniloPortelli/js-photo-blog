@@ -47,6 +47,15 @@ main {
     background-color: #FFFFFF;
 }
 
+.card:hover {
+    transform: rotate(15deg) scale(1.5);
+    transition: 0.3s ease-in-out;
+    z-index: 1;
+    border: solid black 1px;
+}
+
+
+
 .image{
     /* border: solid green 2px; */
     height: 65%;
