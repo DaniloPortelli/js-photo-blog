@@ -2,6 +2,25 @@
     margin: 0;
 }
 
+body{
+    position: relative;
+}
+
+/* Modal */
+.none{
+    display: none;
+}
+
+
+#modal{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
 header {
     height: 15vh;
     background-image: url(img/wall.png);

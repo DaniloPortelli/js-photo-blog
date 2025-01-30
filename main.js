@@ -1,20 +1,20 @@
 // Milestone 1
 // Sfruttando gli screen e gli asset in allegato riproduciamo la grafica
-//  proposta in maniera statica: utilizzando soltanto HTML e CSS e 
-// riproducendo una singola fotografia 
+//  proposta in maniera statica: utilizzando soltanto HTML e CSS e
+// riproducendo una singola fotografia
 // (usiamo una qualunque immagine a piacimento)
 
 
 // Milestone 2
 // Utilizzando Postman, testiamo una chiamata a questo endpoint:
 // https://lanciweb.github.io/demo/api/pictures/
-// Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare 
+// Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare
 // a come poterli sfruttare.
 
 
 // Milestone 3
-// Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX 
-// all’API, sfruttando la risposta per generare dinamicamente in pagina 
+// Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX
+// all’API, sfruttando la risposta per generare dinamicamente in pagina
 // una serie di foto!
 
 
@@ -25,22 +25,23 @@
 
 
 // Bonus
-// rendi la pagina responsive, in modo che su mobile e tablet le foto 
-// si dispongano man mano una sotto l’altra ed il titolo abbia una 
+// rendi la pagina responsive, in modo che su mobile e tablet le foto
+// si dispongano man mano una sotto l’altra ed il titolo abbia una
 // dimensione adeguata
 
 const container = document.getElementById("container")
 
-for (let i = 0; i < 6; i++) {
 
-    fetch('https://lanciweb.github.io/demo/api/pictures/')
-        .then(response => response.json())
-        .then(data => {
+fetch('https://lanciweb.github.io/demo/api/pictures/')
+    .then(response => response.json())
+    .then(data => {
 
-            let element = data[i]
+        let arrayCards = [];
+
+        data.forEach(element => {
 
             container.innerHTML +=
-                `<div class="card">
+                `<div class="card cards" id="click" number=${element.id}>
                     <div class="svg">
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g filter="url(#filter0_d_11_3)">
@@ -79,5 +80,33 @@ for (let i = 0; i < 6; i++) {
                         <h4>${element.date}</h4>
                     </div>
                 </div>`
+
+
+            arrayCards = document.querySelectorAll(".cards")
+            // const modal = document.getElementById("modal")
+
+            // element.addEventListener("click", function (){
+
+            // })
+
+
         });
-}
+
+        arrayCards.forEach(element => {
+            element.addEventListener("click", function () {
+                modal.classList.remove("none");
+                
+
+
+            })
+        });
+
+
+        console.log(arrayCards)
+
+
+    });
+
+
+
+
