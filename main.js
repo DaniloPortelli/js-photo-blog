@@ -95,14 +95,14 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         arrayCards.forEach(element => {
             element.addEventListener("click", function () {
                 modal.classList.remove("none");
-                
+                arrayCards[1]
 
 
             })
         });
 
 
-        console.log(arrayCards)
+        console.log(arrayCards[1])
 
 
     });
