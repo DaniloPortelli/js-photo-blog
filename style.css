@@ -6,31 +6,6 @@ body{
     position: relative;
 }
 
-/* Modal */
-.none{
-    display: none;
-}
-
-
-#modal{
-    position: absolute;
-    height: 100vh;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.image-modal{
-    width: 50%;
-    height: 50%;
-
-    
-}
-
-
 header {
     height: 15vh;
     background-image: url(img/wall.png);
@@ -115,4 +90,39 @@ main {
 .svg{
     position: absolute;
     top: -10px;
+}
+
+
+/* Modal */
+.modal{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.none{
+    display: none;
+}
+
+
+
+.img-modal{
+    width: 450px;
+    height: 450px;
+}
+
+#btn-modal{
+    background-color: black;
+    color: #FFFFFF;
+    border-radius: 20px;
+    height: 25px;
+    width: 80px;
+    cursor: pointer;
+    border: 0;
 }

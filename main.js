@@ -1,43 +1,13 @@
-// Milestone 1
-// Sfruttando gli screen e gli asset in allegato riproduciamo la grafica
-//  proposta in maniera statica: utilizzando soltanto HTML e CSS e
-// riproducendo una singola fotografia
-// (usiamo una qualunque immagine a piacimento)
-
-
-// Milestone 2
-// Utilizzando Postman, testiamo una chiamata a questo endpoint:
-// https://lanciweb.github.io/demo/api/pictures/
-// Studiamo bene la risposta e i dati che ci fornisce iniziando a pensare
-// a come poterli sfruttare.
-
-
-// Milestone 3
-// Inseriamo un foglio JavaScript ed effettuiamo una chiamata AJAX
-// all’API, sfruttando la risposta per generare dinamicamente in pagina
-// una serie di foto!
-
-
-// Font utilizzati:
-// titoli: ‘Edu Tas Beginner’, sans-serif;
-// date: ‘Sometype Mono’, ‘monospace’;
-// (Dovreste sapere a questo punto cosa e come prendere da Google // Fonts
-
-
-// Bonus
-// rendi la pagina responsive, in modo che su mobile e tablet le foto
-// si dispongano man mano una sotto l’altra ed il titolo abbia una
-// dimensione adeguata
-
+// Modifico dinamicamente le foto in pagina con fetch e manipolazione del dom
 const container = document.getElementById("container")
-
 
 fetch('https://lanciweb.github.io/demo/api/pictures/')
     .then(response => response.json())
     .then(data => {
 
-        let arrayCards = [];
 
+
+        // Con il metodo forEach aggiungo in pagina tante "cards" quante sono presenti nell'api
         data.forEach(element => {
 
             container.innerHTML +=
@@ -82,29 +52,45 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
                 </div>`
 
 
-            arrayCards = document.querySelectorAll(".cards")
-            // const modal = document.getElementById("modal")
 
-            // element.addEventListener("click", function (){
-
-            // })
 
 
         });
 
+// Creo variabile per togliere e mettere la classe "none" del modal
+        const divModal = document.getElementById("modal");
+
+// Creo array per inserire le "cards"
+        let arrayCards = [];
+        arrayCards = document.querySelectorAll(".cards")
+
+// Con il metodo forEach "estraggo" ciascuna card dall'array
         arrayCards.forEach(element => {
-            element.addEventListener("click", function () {
-                modal.classList.remove("none");
-                arrayCards[1]
 
+// Creo una variabile che mi restituisca il numero (id) di ciascuna foto
+            let number = element.getAttribute("number")
 
-            })
+// Click event con cui inserisco una foto dinamica in html
+            element.addEventListener("click", (myFunction));
+
+            function myFunction() {
+
+                divModal.classList.remove("none");
+                divModal.innerHTML =
+                    `
+                    <button id="btn-modal">
+                        Close
+                    </button>
+                    <img class="img-modal" src="https://marcolanci.it/boolean/assets/pictures/${number}.png" alt="">
+                    `
+// Click event bottone per chiudere la foto
+                const btnModal = document.getElementById("btn-modal");
+                btnModal.addEventListener("click", (myFunction));
+                function myFunction() {
+                    divModal.classList.add("none");
+                }
+            }
         });
-
-
-        console.log(arrayCards[1])
-
-
     });
 
 
