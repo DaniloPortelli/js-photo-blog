@@ -30,11 +30,11 @@ main {
 .container {
     /* border: solid blue 2px; */
     height: 100%;
-    width: 55%;
+    width: 40%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 30px;
     align-items: center;
     align-content: center;
 }
@@ -43,7 +43,7 @@ main {
     position: relative;
     display: flex;
     height: 45%;
-    flex-basis: calc(75% / 3);
+    flex-basis: calc(100% / 3 - 30px);
     /* border: solid red 2px; */
     flex-direction: column;
     align-items: center;
@@ -58,8 +58,6 @@ main {
     border: solid black 1px;
     cursor: pointer;
 }
-
-
 
 .image{
     /* border: solid green 2px; */
@@ -92,7 +90,6 @@ main {
     top: -10px;
 }
 
-
 /* Modal */
 .modal{
     position: absolute;
@@ -109,8 +106,6 @@ main {
 .none{
     display: none;
 }
-
-
 
 .img-modal{
     width: 450px;

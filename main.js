@@ -6,8 +6,7 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
     .then(data => {
 
 
-
-        // Con il metodo forEach aggiungo in pagina tante "cards" quante sono presenti nell'api
+        // Con il metodo forEach aggiungo in pagina tante "cards" quante sono presenti nel server esterno
         data.forEach(element => {
 
             container.innerHTML +=
@@ -61,7 +60,7 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
         const divModal = document.getElementById("modal");
 
 // Creo array per inserire le "cards"
-        let arrayCards = [];
+        // let arrayCards = [];
         arrayCards = document.querySelectorAll(".cards")
 
 // Con il metodo forEach "estraggo" ciascuna card dall'array
