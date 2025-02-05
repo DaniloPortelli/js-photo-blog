@@ -68,6 +68,7 @@ fetch('https://lanciweb.github.io/demo/api/pictures/')
 
 // Creo una variabile che mi restituisca il numero (id) di ciascuna foto
             let number = element.getAttribute("number")
+            console.log(element)
 
 // Click event con cui inserisco una foto dinamica in html
             element.addEventListener("click", (myFunction));
